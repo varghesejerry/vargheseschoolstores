@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <style>
+
+    </style>
+</head>
+<body style="background-image:url({% static 'images/course-02.jpg' %});  background-size: cover;" >
+<center>
+    <br>
+<div>
+    <h2 ><div class="logo"><img src="{% static 'images/logo.png' %}" alt="" /></div></h2>
+</div><br>
+<h3 style="color:black;font-size:200%" >Login</h3>
+<form action="login" method="post">
+    {% csrf_token %}
+      <p><input type="text" name="username" placeholder="Username"><br></p>
+      <p><input type="password" name="password" placeholder="Enter your Password"><br></p>
+      <p><button type="submit"> Login </button></p>
+      <p style="color:black;font-size:100%"><a href="{% url 'register' %}">Register if you don't have an account.</a></p>
+</form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+</head>
+<body>
+    <div class="confirmation-message">
+        <h2>{{ message }}</h2>
+        <p>Thank you for your order!</p>
+    </div>
+   <a class="btn btn-success" href="{% url 'index' %}">Home</a>&nbsp;
+   <a class="btn btn-danger" href="{% url 'index' %}">Logout</a>
+</body>
+</html>
